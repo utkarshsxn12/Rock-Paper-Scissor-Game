@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+
+    <!-- CONNECTED CSS -->
+    <link rel="stylesheet" href="rps.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎮 RPS</h1>
+        
+        <div class="scoreboard">
+            <div class="score-item">
+                <div class="score-label">You</div>
+                <div class="score-value" id="playerScore">0</div>
+            </div>
+            <div class="score-item">
+                <div class="score-label">Computer</div>
+                <div class="score-value" id="computerScore">0</div>
+            </div>
+            <div class="score-item">
+                <div class="score-label">Ties</div>
+                <div class="score-value" id="tieScore">0</div>
+            </div>
+        </div>
+
+        <div class="choices">
+            <button class="choice" data-choice="rock" title="Rock">✊</button>
+            <button class="choice" data-choice="paper" title="Paper">✋</button>
+            <button class="choice" data-choice="scissors" title="Scissors">✌️</button>
+        </div>
+
+        <div class="result-area">
+            <div class="play-details" id="playDetails">
+                <div class="play-choice">
+                    <div class="play-icon" id="playerChoice"></div>
+                    <div class="play-label">You</div>
+                </div>
+                <div class="vs">VS</div>
+                <div class="play-choice">
+                    <div class="play-icon" id="computerChoice"></div>
+                    <div class="play-label">Computer</div>
+                </div>
+            </div>
+            <div class="result-text" id="resultText">Choose your move!</div>
+            <button class="reset-btn" id="resetBtn">Reset Scores</button>
+        </div>
+    </div>
+
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup">
+            <div class="popup-icons">
+                <span id="popupPlayerChoice"></span>
+                <span class="popup-vs">VS</span>
+                <span id="popupComputerChoice"></span>
+            </div>
+            <div class="popup-result" id="popupResult"></div>
+            <div class="popup-message" id="popupMessage"></div>
+            <button class="popup-btn" id="popupBtn">Continue</button>
+        </div>
+    </div>
+
+    <!-- CONNECTED JS -->
+    <script src="rps.js"></script>
+</body>
+</html>
